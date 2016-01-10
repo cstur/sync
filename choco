@@ -1,0 +1,11 @@
+Set-ExecutionPolicy unrestricted
+
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+choco search <keyword>
+choco list <keyword>
+choco install <package1 package2 package3...>
+choco list -localonly
+choco upgrade <package>
+choco version
+choco uninstall <package>
