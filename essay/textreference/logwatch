@@ -1,0 +1,22 @@
+logwatch---系统日志监控
+Logwatch能够对系统Log报告进行分析，能自动发邮件给你，让你不用每天登陆系统去看烦琐的日志文件。它还能够能够根据用户的需求进行定制。如果要想迅速的得到 Linux 环境中的日志报告信息, Logwatch 是一个很好的工具.
+安装
+一般的操作系统都自带了这个程序包
+
+设置
+由于这个日志分析软件需要借助系统自带的MTA发邮件给你，所有你的系统需要安装比如sendmail，postfix等邮件程序，自己写一个也可以，比较麻烦，还是用系统自带的吧，而且你只要安装完sendmail，什么也不用设置就可以发邮件了。
+
+推荐使用rpm包进行安装，方便。
+vi /etc/log.d/logwatch.conf
+修改以下内容为这样：
+MailTo = 123456@gmail.com  你的邮箱地址
+Detail = High              日志详细程度为高
+ 
+启动sendmail
+service sendmail start
+ 
+如果你现在就想发一份日志文件到你邮箱，使用以下命令：
+perl /usr/sbin/logwatch    你的机器必须安装perl软件包
+ 
+看看邮件是否发送成功
+tail /var/log/maillog
