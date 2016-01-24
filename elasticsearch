@@ -1,0 +1,3 @@
+$ bin/elasticsearch -d
+$ bin/elasticsearch -d -p pid 
+$ kill `cat pid` 
