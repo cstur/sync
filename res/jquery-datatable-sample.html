@@ -8,7 +8,16 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'colvis',
+                collectionLayout: 'fixed two-column'
+            }
+        ]
+    }
+    );
 } );
 </script>
 </head>
