@@ -135,3 +135,27 @@ mesg：允许vi显示其他用户用write写到自己终端上的信息
 ：!command：执行shell命令command
 ：n1,n2 w!command：将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入
 ：r!command：将命令command的输出结果放到当前行
+
+1. 使用w命令查看登录用户正在使用的进程信息
+
+scp web-framework-2.4.0.jar op1@10.2.7.128:~
+
+查看linux文件的权限：ls -l 文件名称
+
+查看所有用户/etc/passwd
+
+sudo chown deploy web-framework-2.4.0.jar //修改文件拥有者为 yangzongde 
+sudo chgrp deploy web-framework-2.4.0.jar //修改拥有者组为 yangzongde
+
+df -h /data
+
+find / -type f -size +10G
+du -sh *
+
+cat /proc/cpuinfo 显示CPU info的信息
+cat /proc/interrupts 显示中断
+cat /proc/meminfo 校验内存使用
+cat /proc/swaps 显示哪些swap被使用
+cat /proc/version 显示内核的版本
+cat /proc/net/dev 显示网络适配器及统计
+cat /proc/mounts 显示已加载的文件系统 
