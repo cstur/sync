@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>First App - Tag UI</title>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/kendo/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="bower_components/kendo-ui/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="bower_components/kendo-ui/styles/kendo.metro.min.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('tag.js')
+            .then(null, console.error.bind(console));
+    </script>
+
+    <tag-main></tag-main>
+
+  </body>
+</html>

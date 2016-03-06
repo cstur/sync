@@ -1,0 +1,19 @@
+{
+  "name": "tagui",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cstur/sync",
+  "authors": [
+    "stur <sdongjie@126.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kendo-ui": "kendo-ui-core#~2016.1.226+SP1"
+  }
+}
