@@ -13,3 +13,11 @@ npm install es6-promise@^3.0.2 es6-shim@^0.33.3 reflect-metadata@0.1.2 rxjs@^5.0
 transpiler
 
 traceur/babel
+
+webpack-dev-server --progress --colors
+
+$ webpack --config XXX.js //使用另一份配置文件（比如webpack.config2.js）来打包
+$ webpack --watch //监听变动并自动打包
+$ webpack -p //压缩混淆脚本，这个非常非常重要！
+$ webpack -d //生成map映射文件，告知哪些模块被最终打包到哪里了
+
