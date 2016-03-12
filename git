@@ -1,0 +1,4 @@
+git config --global alias.auto-commit '!git add -A && git commit -m "auto commit" && git push origin master'
+git auto-commit
+
+git config --global alias.auto-publish '!git add -A && git commit -m "auto commit" && git push origin master && ./publish.sh'
